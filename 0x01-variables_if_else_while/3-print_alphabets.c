@@ -2,31 +2,25 @@
 /**
  * main - Entry point
  *
- * Description - print both uper and lower case
+ * Description - print alphabets in lowercase and uppercase
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
-	/* Print lowercase alphabet*/
-	char ch = 'a';
+	int n = 97;
+	int m = 65;
 
-	while (ch <= 'z')
+	while (n <= 122)
 	{
-		putchar(ch);
-		ch++;
+		putchar(n);
+		n++;
 	}
-	/* Print a new line*/
-	putchar('\n');
-	/* Print upercase alphabet*/
-	ch = 'A';
-
-	while (ch <= 'Z')
+	while (m <= 90)
 	{
-		putchar(ch);
-			ch++;
+	putchar(m);
+	m++;
 	}
-	/* Print new line*/
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
