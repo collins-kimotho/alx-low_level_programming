@@ -2,7 +2,7 @@
 
 ## Tasks
 
-### [0. A library is not a luxury but one of the necessities of life](libmy.a, main.h)
+### [0. A library is not a luxury but one of the necessities of life](libmy.a)
 Create the static library libmy.a containing all the functions listed below:
 * int _putchar(char c);
 * int _islower(int c);
