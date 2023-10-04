@@ -3,7 +3,7 @@
 
 /**
  * _strdup - returns a pointer to a newly allocated
- * spaces in memory, which contains a copy of the string 
+ * spaces in memory, which contains a copy of the string
  * given as a parameter
  * @str: string to duplicate
  *
@@ -31,4 +31,4 @@ char *_strdup(char *str)
 		i++;
 	}
 	return (duplicate_str);
-}	
+}
