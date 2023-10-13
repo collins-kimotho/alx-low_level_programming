@@ -3,7 +3,7 @@
 
 /**
  * print_strings - prints strings, followed by a new line
- * @:separator: string to be printed between the strings
+ * @separator: string to be printed between the strings
  * @n: Number of strings passed to the function
  *
  */
