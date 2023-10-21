@@ -2,7 +2,6 @@
 #include "lists.h"
 /**
  * before_main - prints a specific string before main function
- * @constructor: attribute to specify a function
  */
 void __attribute__((constructor)) before_main()
 {
