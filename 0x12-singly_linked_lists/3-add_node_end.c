@@ -35,7 +35,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new_node;
 		return (new_node);
 	}
-	else {
+	else
+	{
 	/* Traverse to the last node in the list */
 	while (last->next)
 		last = last->next;
