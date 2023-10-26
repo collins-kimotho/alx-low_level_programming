@@ -9,26 +9,19 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask;
-	char flag = 0;
 
-	/* create a mask with the highest bit set */
-	mask = 1UL << (sizeof(n) * 8 - 1);
-
-	/* iterate over teach bit from left to right */
-	while (mask)
+	/* check if the input nuber is 0 */
+	if (n == 0)
 	{
-		if ((n & mask && flag) || mask == 1)
-		{
-			_putchar('1');
-			flag = 1;
-		}
-		else if (n & mask || flag)
-		{
-			_putchar('0');
-			flag = 1;
-		}
-
-		/* shift the mask to the right by one bit */
-		mask >>= 1;
+		_putchar ('0');
+		return;
 	}
+
+	/* iterate over the input */
+	  mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	  while (mask)
+	  {
+		  _putchar (((n & mask) != 0) ? '1' : '0');
+		  mask >>= 1;
+	  }
 }
