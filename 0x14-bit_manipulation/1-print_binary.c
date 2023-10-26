@@ -12,26 +12,23 @@ void print_binary(unsigned long int n)
 	char flag = 0;
 
 	/* create a mask with the highest bit set */
-	mask = 1UL << ((sizeof(n) * 8) - 1);
+	mask = 1UL << (sizeof(n) * 8 - 1);
 
-	/* iterate over each bit from left to right */
+	/* iterate over teach bit from left to right */
 	while (mask)
 	{
-		/* if the bit is set and flag is set */
-		if ((n && mask && flag) || mask == 1)
+		if ((n & mask && flag) || mask == 1)
 		{
 			_putchar('1');
 			flag = 1;
 		}
-
-		/* if the bit is not set and flag is set */
 		else if (n & mask || flag)
 		{
 			_putchar('0');
 			flag = 1;
 		}
 
-		/* shit the mask to the right by one bit */
+		/* shift the mask to the right by one bit */
 		mask >>= 1;
 	}
 }
