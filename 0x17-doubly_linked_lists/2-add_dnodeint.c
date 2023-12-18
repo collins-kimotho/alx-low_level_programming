@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - adds a new node at the beginning of a dll
  * @head: double pointer to the head of the list
- * @h: the integer value of the new node
+ * @n: the integer value of the new node.
  *
  * Return: the address of the new element, or NULL if failed
  */
