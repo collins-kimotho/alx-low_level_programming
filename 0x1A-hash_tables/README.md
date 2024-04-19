@@ -70,7 +70,8 @@ typedef struct hash_table_s
 } hash_table_t;
 ```
 # Tasks
-[0. >>> ht = {}](0-hash_table_create.c)
+[0. >>> ht = {}](0-hash_table_create.c)  
+
 Write a function that creates a hash table.
 
 * Prototype: **hash_table_t hash_table_create(unsigned long int size);**
@@ -124,7 +125,8 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 ==7602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x1A. Hash tables$
 ```
-[1. djb2](1-djb2.c)
+[1. djb2](1-djb2.c)  
+
 Write a hash function implementing the djb2 algorithm.
 
 * Prototype: **unsigned long int hash_djb2(const unsigned char **\*str)**;
