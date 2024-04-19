@@ -1,5 +1,5 @@
 # 0x1A. C - Hash tables
-`/**
+```/**
  * struct shash_node_s - Node of a sorted hash table
  *
  * @key: The key, string
@@ -34,4 +34,5 @@ typedef struct shash_table_s
      shash_node_t **array;
      shash_node_t *shead;
      shash_node_t *stail;
-} shash_table_t;`
+} shash_table_t
+```
