@@ -129,7 +129,7 @@ julien@ubuntu:~/0x1A. Hash tables$
 
 Write a hash function implementing the djb2 algorithm.
 
-* Prototype: **unsigned long int hash_djb2(const unsigned char **\*str)**;
+* Prototype: **unsigned long int hash_djb2(const unsigned char \**str)**;
 * You are allowed to copy and paste the function from this page
 ```
 julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
