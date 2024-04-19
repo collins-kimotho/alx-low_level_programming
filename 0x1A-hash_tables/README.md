@@ -71,9 +71,9 @@ typedef struct hash_table_s
 ```
 # Tasks
 [0. >>> ht = {}](0-hash_table_create.c)
-* Write a function that creates a hash table.
+Write a function that creates a hash table.
 
-* Prototype: hash_table_t **hash_table_create(unsigned long int size);**
+* Prototype: **hash_table_t hash_table_create(unsigned long int size);**
 * where size is the size of the array
 * Returns a pointer to the newly created hash table
 * If something went wrong, your function should return NULL
@@ -125,3 +125,62 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 julien@ubuntu:~/0x1A. Hash tables$
 ```
 [1. djb2](1-djb2.c)
+Write a hash function implementing the djb2 algorithm.
+
+* Prototype: **unsigned long int hash_djb2(const unsigned char **\*str)**;
+* You are allowed to copy and paste the function from this page
+```
+julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
+unsigned long int hash_djb2(const unsigned char *str)
+{
+    unsigned long int hash;
+    int c;
+
+    hash = 5381;
+    while ((c = *str++))
+    {
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+    }
+    return (hash);
+}
+julien@ubuntu:~/0x1A. Hash tables$ 
+julien@ubuntu:~/0x1A. Hash tables$ cat 1-main.c 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "hash_tables.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    char *s;
+
+    s = "cisfun";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    s = "Don't forget to tweet today";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    s = "98";
+    printf("%lu\n", hash_djb2((unsigned char *)s));
+    return (EXIT_SUCCESS);
+}
+julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-djb2.c -o b
+julien@ubuntu:~/0x1A. Hash tables$ ./b 
+6953392314605
+3749890792216096085
+5861846
+julien@ubuntu:~/0x1A. Hash tables$ 
+```
+[2. key -> index](2-key_index.c)
+Write a function that gives you the index of a key.
+
+* Prototype: **unsigned long int key_index(const unsigned char \*key, unsigned long int size)**;
+* where key is the key
+* and size is the size of the array of the hash table
+* This function should use the hash_djb2 function that you wrote earlier
+* Returns the index at which the key/value pair should be stored in the array of the hash table
+* You will have to use this hash function for all the next tasks
+
