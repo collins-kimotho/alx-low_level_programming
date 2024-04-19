@@ -174,7 +174,7 @@ julien@ubuntu:~/0x1A. Hash tables$ ./b
 5861846
 julien@ubuntu:~/0x1A. Hash tables$ 
 ```
-[2. key -> index](2-key_index.c)
+[2. key -> index](2-key_index.c)  
 Write a function that gives you the index of a key.
 
 * Prototype: **unsigned long int key_index(const unsigned char \*key, unsigned long int size)**;
