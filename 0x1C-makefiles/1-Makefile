@@ -13,6 +13,9 @@ all: school
 school: $(SRC)
 	$(CC) -o $@ $^
 
+# Declare the clean target as phony
+.PHONY: clean
+
 # Clean up generated files
 clean:
 	rm -f school
