@@ -1,0 +1,18 @@
+# Makefile for the 'school' project
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Default target (build the executable)
+all: school
+
+# Compile the source files
+school: $(SRC)
+	$(CC) -o $@ $^
+
+# Clean up generated files
+clean:
+	rm -f school
