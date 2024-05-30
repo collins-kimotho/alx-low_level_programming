@@ -1,15 +1,11 @@
-# Makeffile for compiling "school'
+# Makefile for compiling 'school'
 
 # Default target: build the executable
 all: school
 
-# Comile source files into object files
-%.o: %.c
-	gcc -wall -Wextra -std-c99 -c $< -o $@
-
-# Link object files to create the executable
-school: main.o school.o
-	gcc -Wall -Wextra -std=c99 main.o school.o -o school
+# Compile source files into executable
+school: main.c school.c
+	gcc main.c school.c -o school
 
 # Clean up generated files
 clean:
