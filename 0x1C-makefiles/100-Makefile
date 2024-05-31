@@ -1,37 +1,22 @@
-# Make file for the school project
+# Make file for school project
 
-# Compiler
 CC = gcc
-
-# Source files
-SRC = main.c school.c
-
-# Object files
+SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
-
-# Executable name
-NAME = school
-
-# Program to delete files
-RM = rm -f
-
-# Compiler flags
+NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Rules
-all: $(NAME)
+.PHONY: all clean oclean fclean re
 
-$(NAME): $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(OBJ) $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean
+fclean: clean oclean
 
 re: fclean all
-
-.PHONY: all clean oclean fclean re
