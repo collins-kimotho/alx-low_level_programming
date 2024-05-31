@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for finding island perimeter"""
 
 
 def island_perimeter(grid):
@@ -11,11 +12,7 @@ def island_perimeter(grid):
     Returns:
         int: The perimeter of the island
 
-    Notes:
-        - 0 rep a water zone.
-        - 1 rep a land zone
     """
-
     rows, cols = len(grid), len(grid[0])
     perimeter = 0
 
